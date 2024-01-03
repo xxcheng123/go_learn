@@ -1,0 +1,25 @@
+[ CA_default ]
+copy_extensions = copy
+
+[req]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = CN
+ST = Zhejiang
+L = Hangzhou
+O = xxcheng
+OU = xxcheng
+CN = grpc.xxcheng.cn
+
+[v3_req]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = xxcheng.cn
+DNS.2 = grpc-client.xxcheng.cn
+DNS.3 = grpc.xxcheng.cn
