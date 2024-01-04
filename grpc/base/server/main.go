@@ -17,7 +17,7 @@ import (
  */
 
 type SimpleServiceServer struct {
-	simple.SimpleServiceServer
+	simple.UnsafeSimpleServiceServer
 }
 
 func (s *SimpleServiceServer) Hello(ctx context.Context, req *simple.HelloReq) (resp *simple.HelloResp, err error) {

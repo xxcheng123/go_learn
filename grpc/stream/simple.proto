@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package simpleGRPC;
+
+
+option go_package="/pb/simple";
+
+
+message HelloReq{
+  string title=1;
+}
+message HelloResp{
+  string reply=1;
+}
+
+service SimpleService{
+  rpc Hello(stream HelloReq)returns(stream HelloResp);
+  rpc HelloForever(HelloReq)returns(stream HelloResp);
+}

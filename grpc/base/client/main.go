@@ -20,7 +20,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	defer conn.Close()
+	defer func() {
+		_ = conn.Close()
+	}()
 	client := simple.NewSimpleServiceClient(conn)
 	resp, err := client.Hello(context.Background(), &simple.HelloReq{
 		Title: "a b c",
