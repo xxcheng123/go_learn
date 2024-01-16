@@ -9,34 +9,28 @@ import "fmt"
  */
 /**
 装饰模式
-原本没有的功能，加一个装饰器
+原有的功能，添加新的功能
 */
 
-type User interface {
-	GetName() string
-	SetName(string)
+type UserIF interface {
+	Walk()
 }
-type UserImpl struct {
-	name string
+type User struct{}
+
+func (u *User) Walk() {
+	fmt.Println("走路...")
 }
 
-func (u *UserImpl) GetName() string {
-	return u.name
-}
-func (u *UserImpl) SetName(name string) {
-	u.name = name
+type Caller struct {
+	User UserIF
 }
 
-type UserDecorator struct {
-	User User
-}
-
-func (u *UserDecorator) Walk() {
-	fmt.Printf("%s出去走走\n", u.User.GetName())
+func (c *Caller) Walk() {
+	fmt.Println("打电话")
+	c.User.Walk()
 }
 func main() {
-	var u User = &UserImpl{}
-	u.SetName("大米")
-	ud := UserDecorator{User: u}
-	ud.Walk()
+	var u UserIF = &User{}
+	u = &Caller{User: u}
+	u.Walk()
 }
