@@ -25,7 +25,7 @@ type Person interface {
 	SayI
 }
 type AbstractFactory interface {
-	Create()
+	Create() Person
 }
 type Man struct {
 }
