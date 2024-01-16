@@ -7,6 +7,10 @@ import "fmt"
 * @Email developer@xxcheng.cn
 * @Date: 2024/1/15 18:18
  */
+/**
+装饰模式
+原本没有的功能，加一个装饰器
+*/
 
 type User interface {
 	GetName() string

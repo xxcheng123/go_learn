@@ -7,6 +7,9 @@ import "fmt"
 * @Email developer@xxcheng.cn
 * @Date: 2024/1/15 17:57
  */
+/***
+原本不完善的功能，加一个代理模式，帮你做其他事情
+*/
 
 type SwimmingIF interface {
 	Swimming()
