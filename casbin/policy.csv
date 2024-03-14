@@ -1,0 +1,2 @@
+p,user::common,/api/user/info,get
+p,super::admin,/api/admin/info,get
