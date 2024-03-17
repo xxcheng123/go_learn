@@ -11,6 +11,7 @@ require (
 	github.com/pion/stun v0.6.1
 	github.com/pion/transport/v2 v2.2.1
 	github.com/pkg/errors v0.9.1
+	golang.org/x/sys v0.18.0
 	google.golang.org/grpc v1.60.1
 	google.golang.org/protobuf v1.33.0
 	gorm.io/driver/mysql v1.5.2
@@ -51,7 +52,6 @@ require (
 	golang.org/x/arch v0.7.0 // indirect
 	golang.org/x/crypto v0.21.0 // indirect
 	golang.org/x/net v0.22.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20231002182017-d307bd883b97 // indirect
